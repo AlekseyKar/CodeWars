@@ -9,7 +9,7 @@
 // { 6, 2, 1, 8, 10 } => 16
 // { 1, 1, 11, 2, 3 } => 6
 
-function sumArray(arr) {
-  if (!Array.isArray(arr)) return 0
-  return arr.sort((a,b) => a - b).slice(1, arr.length - 1).reduce((a,b) => a + b, 0)
-}
+// function sumArray(arr) {
+//   if (!Array.isArray(arr)) return 0
+//   return arr.sort((a,b) => a - b).slice(1, arr.length - 1).reduce((a,b) => a + b, 0)
+// }
