@@ -10,6 +10,17 @@ For example:
 
 if (x) == ['a', 3] you should return [['a', 3], ['a', 3], ['a', 3]].
 */
+function explode(x){
+  let [a,b] = x;
+  
+  if(typeof a == "number" && typeof b == "number") return new Array(a+b).fill(x);
+  else if(typeof a == "number") return new Array(a).fill(x);
+  else if(typeof b == "number") return new Array(b).fill(x);
+  
+  return 'Void!';
+}
+
+// or 
 
 function explode(x) {
   if (typeof x[1] === "number" && typeof x[0] === "number") {
