@@ -22,3 +22,9 @@ function filterHomogenous(arrays) {
   );
   return arr.filter(v => v.length !== 0);
 }
+
+// or 
+
+function filterHomogenous(arr) {
+  return arr.filter(subArr => subArr.length > 0 && subArr.every(val => typeof val === typeof subArr[0]));
+}
