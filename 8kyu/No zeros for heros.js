@@ -25,3 +25,8 @@ function noBoringZeros(n) {
 
 
 // В итоге функция noBoringZeros возвращает число без конечных нулей. Например, вызов noBoringZeros(10200) вернет число 102.
+
+function noBoringZeros(n) {
+  while(n%10==0 && n!=0){n/=10;}
+  return n;
+}
