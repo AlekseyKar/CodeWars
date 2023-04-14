@@ -1,0 +1,23 @@
+// Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.
+
+// Example
+// createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) # => returns "(123) 456-7890"
+
+function createPhoneNumber(numbers){
+  
+  let numStr = numbers.join('');
+  
+  let firstStr = "(" + numStr.slice(0, 3) + ") ";
+  
+  let midStr = numStr.slice(3, 6) + "-";
+  
+  let endStr = numStr.slice(6);
+  
+  return  firstStr + midStr + endStr;
+}
+
+// or 
+
+function createPhoneNumber(numbers){
+  return numbers.reduce((p,c) => p.replace('x',c), "(xxx) xxx-xxxx");
+}
