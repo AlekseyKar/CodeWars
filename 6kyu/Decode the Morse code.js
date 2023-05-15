@@ -21,3 +21,7 @@ decodeMorse = function(morseCode){
     }).join('');
   }).join(' ');
 }
+
+decodeMorse = function(morseCode){
+  return morseCode.trim().split(' ').map(a => MORSE_CODE[a] || ' ').join('').replace(/\s+/g, ' ');
+}
